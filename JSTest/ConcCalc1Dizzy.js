@@ -59,7 +59,11 @@ function ConcreteCalc() {
             [concreteWanted, "Treated Water", 50, "TreatWRequired"],
             [concreteWanted, "Acid", 50, "TreatedWAcid"],
             // Treated Water LC Route
-            [concreteWanted, "Treated Water", 50, "TWRequired"],
+            [concreteWanted, "Treated Water", 50, "LCTWRequired"],
+            [concreteWanted, "Auto Parts", 100, "LCTWCar"],
+            [concreteWanted, "Military Goods", 100, "LCTWMG"],
+            [concreteWanted, "Export Goods", 100, "LCTWEG"],
+            [concreteWanted, "Liberty City Token", 0, "LCTWToken"],
             // Quarry Rubble Calcs
             [Math.ceil(ceil10(((concreteWanted * 25) / 0.6), 1) / 12), "Quarry Rubble", 150, "QRRequired"],
             [Math.ceil(ceil10(((concreteWanted * 25) / 0.6), 1) / 12) * 4, "Ore Mix", 150, "QROM"],
@@ -72,6 +76,10 @@ function ConcreteCalc() {
             [concreteWanted * 5, "Cement Mix", 50, "CMRequired"],
             [concreteWanted * 25, "Sand", 50, "CMSand"],
             [concreteWanted * 10, "Sawdust - Cement Mix", 50, "CMSawdust"],
+            // Concrete Calcs
+            [concreteWanted, "Concrete", 50, "ConRequired"],
+            [concreteWanted, "Treated Water", 50, "ConSand"], // Change ID to ConTW
+            [concreteWanted * 5, "Cement Mix", 50, "ConMix"],
         ]
 
 
