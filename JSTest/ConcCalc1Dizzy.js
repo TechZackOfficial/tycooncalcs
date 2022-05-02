@@ -1,4 +1,4 @@
-   function ConcreteCalc1() {
+   function ConcreteCalc() {
 
 
         var trailerCapacity = document.getElementById("TrailerSelect").value;
