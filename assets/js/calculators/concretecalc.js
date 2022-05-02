@@ -31,6 +31,9 @@ for (var i = 0; i < materialCalc.length; i++) {
 
 // Concrete Caluclator Designed by TechZack :) | Help with DizzyHurricane
 
-var amountRequired = document.getElementById("AmountRequired");
 
-console.log(amountRequired);
+function ConcreteCalc() {
+    var amountRequired = document.getElementById("AmountRequired").value;
+
+    console.log(amountRequired);
+}
