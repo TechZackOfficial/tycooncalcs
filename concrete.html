@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <script src="JSTest/ConcCalc1Dizzy.js"></script>
 </head>
 
 <body id="page-top">
@@ -73,10 +72,10 @@
                                             <form>
                                                 <div class="row">
                                                     <div class="col">
-                                                        <div class="mb-3"><label class="form-label"><strong>Amount Required</strong></label><input class="form-control" type="number" id="AmountRequired" min="1" oninput="ConcreteCalc1()"></div>
+                                                        <div class="mb-3"><label class="form-label"><strong>Amount Required</strong></label><input class="form-control" type="number" id="AmountRequired" min="1" oninput="ConcreteCalc()"></div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="mb-3"><label class="form-label"><strong>Trailer</strong></label><select class="form-select" id="TrailerSelect" onselect="ConcreteCalc1()">
+                                                        <div class="mb-3"><label class="form-label"><strong>Trailer</strong></label><select class="form-select" id="TrailerSelect" onselect="ConcreteCalc()">
                                                                 <optgroup label="Other Vehicles">
                                                                     <option value="345">Speedo (345kg)</option>
                                                                 </optgroup>
@@ -104,7 +103,7 @@
                                                         <div class="mb-3"><label class="form-label"><strong>Semi-Cabs / Extras</strong><br></label>
                                                             <div class="form-check"><input class="form-check-input" type="checkbox" id="MK15" value="6900"><label class="form-check-label">MK15</label></div>
                                                             <div class="form-check"><input class="form-check-input" type="checkbox" id="PostOP"><label class="form-check-label">PostOP Perk</label></div>
-                                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="MK-1" checked=""><label class="form-check-label">Premium</label></div>
+                                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="Premium" checked=""><label class="form-check-label">Premium</label></div>
                                                         </div>
                                                         <div class="mb-3"><label class="form-label"><strong>Water Route</strong><br></label>
                                                             <div class="form-check"><input class="form-check-input" type="checkbox" id="LSRouteCheck"><label class="form-check-label">Los Santos Route</label></div>
