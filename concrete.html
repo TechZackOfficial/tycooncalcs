@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <script type="text/javascript" src="assets/js/concretecalc.js"></script>
-    <script>
-        import { ConcreteCalc } from "assets/js/concretecalc.js";
-    </script>
+    <script src="DO NOT TOUCH/concretecalc.js"></script>
 </head>
 
 <body id="page-top">
@@ -79,7 +76,7 @@
                                                         <div class="mb-3"><label class="form-label"><strong>Amount Required</strong></label><input class="form-control" type="number" id="AmountRequired" min="1" oninput="ConcreteCalc()"></div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="mb-3"><label class="form-label"><strong>Trailer</strong></label><select class="form-select" id="TrailerSelect">
+                                                        <div class="mb-3"><label class="form-label"><strong>Trailer</strong></label><select class="form-select" id="TrailerSelect" oninput="ConcreteCalc()">
                                                                 <optgroup label="Other Vehicles">
                                                                     <option value="345">Speedo (345kg)</option>
                                                                 </optgroup>

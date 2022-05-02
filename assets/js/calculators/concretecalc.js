@@ -34,6 +34,8 @@ for (var i = 0; i < materialCalc.length; i++) {
 
 function ConcreteCalc() {
     var amountRequired = document.getElementById("AmountRequired").value;
+    var trailer = document.getElementById("TrailerSelect").value;
 
     console.log(amountRequired);
+    console.log(trailer);
 }

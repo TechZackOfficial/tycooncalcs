@@ -31,6 +31,22 @@ for (var i = 0; i < materialCalc.length; i++) {
 
 // Concrete Caluclator Designed by TechZack :) | Help with DizzyHurricane
 
-var amountRequired = document.getElementById("AmountRequired");
+function ConcreteCalc() {
+    // Inputs
+    var amountRequired = document.getElementById("AmountRequired").value;
+    var trailer = document.getElementById("TrailerSelect").value;
+    // Logs
+    var SawdustReq = amountRequired * 10
+    var LogsReq = SawdustReq / 10
+    var LogsTrip = Math.ceil(LogsReq * 60 / trailer);
 
-console.log(amountRequired);
+    if (LogsTrip < 1) {
+        LogsTrip = 1;
+    }
+
+    console.log(`Sawdust Required ${SawdustReq}`);
+    console.log(`Logs Required ${LogsReq}`);
+    console.log(`Trips ${LogsTrip}`);
+
+    //console.log(amountRequired + trailer);
+}
