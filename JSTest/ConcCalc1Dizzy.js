@@ -85,7 +85,8 @@ function ConcreteCalc() {
         // Trips placeholders
         [Math.ceil(ceil10(((concreteWanted * 25) / 0.6), 1) / 12), "QRTrips", 150, "QRTrips"],
         [concreteWanted, "TWTrips", 100, "TWTrips"],
-        [concreteWanted, "TreatedWTripsLosSantos", 100, "TreatedWTrips"]
+        [concreteWanted, "TreatedWTripsLosSantos", 100, "TreatedWTrips"],
+        [concreteWanted, "LogsTrips to Sawmill", 60, "LogsTrips"]
     ]
 
 
