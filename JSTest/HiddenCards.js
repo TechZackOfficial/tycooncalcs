@@ -16,18 +16,18 @@ function HideCards() {
     // Water Route Validation
     if (LSRoute.checked) {
         console.log("LS Route Hidden");
-        document.getElementById("LSRoute").hidden = true;
+        document.getElementById("LSRoute").style.visibility = "hidden";
     } else if (LCRoute.checked) {
         console.log("LC Route Hidden");
-        document.getElementById("LCRoute").hidden = true;
-    } else if (LSRoute.checked === LCRoute.checked) {
+        document.getElementById("LCRoute").style.visibility = "hidden";
+    } /*else if (LSRoute.checked === LCRoute.checked) {
         console.log("Both are checked Do not remove any.");
         document.getElementById("LSRoute").hidden = false;
         document.getElementById("LCRoute").hidden = false;
 
-    } else {
-        document.getElementById("LSRoute").hidden = false;
-        document.getElementById("LCRoute").hidden = false;
+    } */else {
+        document.getElementById("LSRoute").style.visibility = "none";
+        document.getElementById("LCRoute").style.visibility = "none";
     }
 
 
