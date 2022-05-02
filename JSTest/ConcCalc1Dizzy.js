@@ -1,11 +1,34 @@
-   function ConcreteCalc() {
+function decimalAdjust(type, value, exp) {
+
+    if (typeof exp === 'undefined' || +exp === 0) {
+        return Math[type](value);
+    }
+    value = +value;
+    exp = +exp;
+
+    if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
+        return NaN;
+    }
+    // Shift
+    value = value.toString().split('e');
+    value = Math[type](+(value[0] + 'e' + (value[1] ? (+value[1] - exp) : -exp)));
+    // Shift back
+    value = value.toString().split('e');
+    return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
+}
 
 
+
+
+
+
+function ConcreteCalc() {
         var trailerCapacity = document.getElementById("TrailerSelect").value;
         var concreteWanted = document.getElementById("AmountRequired").value;
         var MK15 = document.getElementById("MK15").value;
         var premium = document.getElementById("Premium");
         var PostOP = document.getElementById("PostOP");
+        const ceil10 = (value, exp) => decimalAdjust('ceil', value, exp);
 
 
         if (premium.checked) {
@@ -20,21 +43,35 @@
         console.log(trailerCapacity)
 
 
+        // BIDMAS
+
         const materialCalc = [ // calc for value : item name : weight : HTML Textbox ID
+            // Logs
+            [concreteWanted, "Logs", 50, "LogsRequired"],
+            [concreteWanted * 10, "Sawdust - Logs", 50, "SawdustCalc"],
+            // Toxic Waste Calcs
+            [Math.ceil(concreteWanted / 4), "Toxic Waste", 50, "TWRequired"],
+            [Math.ceil(concreteWanted / 4) * 4, "Acid - Toxic Waste", 50, "TWAcid"],
+            [Math.ceil(concreteWanted / 4) * 2, "Scrap Lead Mix", 50, "TWSLM"],
+            [Math.ceil(concreteWanted / 4) * 2, "Scrap Mercury", 50, "TWSM"],
+            // Treated Water LS Route
+            [concreteWanted, "Untreated Water", 50, "TreatedWUnfil"],
+            [concreteWanted, "Treated Water", 50, "TreatWRequired"],
+            [concreteWanted, "Acid", 50, "TreatedWAcid"],
+            // Treated Water LC Route
+            [concreteWanted, "Treated Water", 50, "TWRequired"],
+            // Quarry Rubble Calcs
+            [Math.ceil(ceil10(((concreteWanted * 25) / 0.6), 1) / 12), "Quarry Rubble", 150, "QRRequired"],
+            [Math.ceil(ceil10(((concreteWanted * 25) / 0.6), 1) / 12) * 4, "Ore Mix", 150, "QROM"],
+            [Math.ceil(ceil10(((concreteWanted * 25) / 0.6), 1) / 12) * 12, "Gravel", 50, "QRGravel"],
+            [Math.ceil(ceil10(((concreteWanted * 25) / 0.6), 1) / 12), "Emerald", 150, "QREmerald"],
+            [ceil10(((concreteWanted * 25) / 0.6), 1), "Gravel - Filter Gravel", 50, "GRRequired"],
+            [ceil10(((concreteWanted * 25) / 0.6), 1) / 10 * 6, "Sand - Filtered Gravel", 50, "GRSand"],
+            [ceil10(((concreteWanted * 25) / 0.6), 1) / 10 * 4, "Flint", 50, "GRFlint"],
+            // Cement Mix
             [concreteWanted * 5, "Cement Mix", 50, "CMRequired"],
             [concreteWanted * 25, "Sand", 50, "CMSand"],
             [concreteWanted * 10, "Sawdust - Cement Mix", 50, "CMSawdust"],
-            [concreteWanted * 10, "Sawdust - Logs", 50, "SawdustCalc"],
-            [concreteWanted, "Treated Water", 50, "TreatWRequired"],
-            [concreteWanted, "Treated Water", 50, "LCTWRequired"],
-            [concreteWanted, "Untreated Water", 50, "TreatedWUnfil"],
-            [concreteWanted, "Acid - Toxic Waste", 50, "TWAcid"],
-            [Math.ceil(concreteWanted * 3.98), "Toxic Waste", 50, "TWRequired"],
-            [concreteWanted, "Logs", 50, "LogsRequired"],
-            [Math.ceil(concreteWanted * 5), "Quarry Rubble", 150, "QRRequired"],
-            [Math.ceil(concreteWanted * 20), "Ore Mix", 150, "QROM"],
-            [Math.ceil(concreteWanted * 60), "Gravel", 50, "QRGravel"],
-            [Math.ceil(concreteWanted * 5), "Emerald", 150, "QREmerald"]
         ]
 
 
