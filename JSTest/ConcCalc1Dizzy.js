@@ -48,10 +48,10 @@ function ConcreteCalc() {
         const materialCalc = [ // calc for value : item name : weight : HTML Textbox ID
             // Logs
             [concreteWanted, "Logs", 50, "LogsRequired"],
-            [concreteWanted * 10, "Sawdust - Logs", 50, "SawdustCalc"],
+            [concreteWanted * 10, "Sawdust", 50, "SawdustCalc"],
             // Toxic Waste Calcs
             [Math.ceil(concreteWanted / 4), "Toxic Waste", 50, "TWRequired"],
-            [Math.ceil(concreteWanted / 4) * 4, "Acid - Toxic Waste", 50, "TWAcid"],
+            [Math.ceil(concreteWanted / 4) * 4, "Acid", 50, "TWAcid"],
             [Math.ceil(concreteWanted / 4) * 2, "Scrap Lead Mix", 50, "TWSLM"],
             [Math.ceil(concreteWanted / 4) * 2, "Scrap Mercury", 50, "TWSM"],
             // Treated Water LS Route
@@ -69,8 +69,9 @@ function ConcreteCalc() {
             [Math.ceil(ceil10(((concreteWanted * 25) / 0.6), 1) / 12) * 4, "Ore Mix", 150, "QROM"],
             [Math.ceil(ceil10(((concreteWanted * 25) / 0.6), 1) / 12) * 12, "Gravel", 50, "QRGravel"],
             [Math.ceil(ceil10(((concreteWanted * 25) / 0.6), 1) / 12), "Emerald", 150, "QREmerald"],
-            [ceil10(((concreteWanted * 25) / 0.6), 1), "Gravel - Filter Gravel", 50, "GRRequired"],
-            [ceil10(((concreteWanted * 25) / 0.6), 1) / 10 * 6, "Sand - Filtered Gravel", 50, "GRSand"],
+            // Gravel to Sand Filtration
+            [ceil10(((concreteWanted * 25) / 0.6), 1), "Gravel", 50, "GRRequired"],
+            [ceil10(((concreteWanted * 25) / 0.6), 1) / 10 * 6, "Sand", 50, "GRSand"],
             [ceil10(((concreteWanted * 25) / 0.6), 1) / 10 * 4, "Flint", 50, "GRFlint"],
             // Cement Mix
             [concreteWanted * 5, "Cement Mix", 50, "CMRequired"],
