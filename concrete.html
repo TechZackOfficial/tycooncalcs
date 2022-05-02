@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <script src="JSTest/ConcCalc1Dizzy.js"></script>
 </head>
 
 <body id="page-top">
@@ -318,34 +317,26 @@
                                     <form>
                                         <div class="row">
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="city"><strong>Sand</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Sand</strong><br></label><input class="form-control" type="number" id="TrailerSand" readonly=""></div>
                                             </div>
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="country"><strong>Flint</strong><br></label><input class="form-control" type="number" readonly=""></div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="city"><strong>Sand</strong><br></label><input class="form-control" type="number" readonly=""></div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="country"><strong>Sawdust&nbsp;</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Sawdust&nbsp;</strong><br></label><input class="form-control" type="number" id="TrailerSawdust" readonly=""></div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="city"><strong>Acid</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Acid</strong><br></label><input class="form-control" type="number" id="TrailerAcid" readonly=""></div>
                                             </div>
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label fw-normal" for="country"><strong>Unfil Water</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label fw-normal"><strong>Unfil Water</strong><br></label><input class="form-control" type="number" id="TrailerUnfil" readonly=""></div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="city"><strong>Treated Water</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Cement Mix</strong><br></label><input class="form-control" type="number" id="TrailerCement" readonly=""></div>
                                             </div>
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="country"><strong>Concrete Mix</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Treated Water</strong><br></label><input class="form-control" type="number" id="TrailedTreated" readonly=""></div>
                                             </div>
                                         </div>
                                     </form>
@@ -353,26 +344,26 @@
                                     <form>
                                         <div class="row">
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="city"><strong>Sand</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Sand</strong><br></label><input class="form-control" type="number" id="PlayerSand" readonly=""></div>
                                             </div>
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="country"><strong>Sawdust&nbsp;</strong><br></label><input class="form-control" type="number" readonly=""></div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="city"><strong>Acid</strong></label><input class="form-control" type="number" readonly=""></div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="country"><strong>Unfil Water</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Sawdust&nbsp;</strong><br></label><input class="form-control" type="number" id="PlayerSawdust" readonly=""></div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="city"><strong>Treated Water</strong></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Acid</strong></label><input class="form-control" type="number" id="PlayerAcid" readonly=""></div>
                                             </div>
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="country"><strong>Concrete Mix</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Unfil Water</strong><br></label><input class="form-control" type="number" id="PlayerUnfil" readonly=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3"><label class="form-label"><strong>Cement Mix</strong><br></label><input class="form-control" type="number" id="PlayerCement" readonly=""></div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3"><label class="form-label"><strong>Treated Water</strong><br></label><input class="form-control" type="number" id="PlayerTreated" readonly=""></div>
                                             </div>
                                         </div>
                                     </form>

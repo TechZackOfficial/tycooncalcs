@@ -80,7 +80,7 @@ function ConcreteCalc() {
         // Concrete Calcs
 
         [concreteWanted, "Concrete", 160, "ConRequired"],
-        [concreteWanted, "Treated Water", 100, "CMRequired"], // Change ID to ConTW
+        [concreteWanted, "Treated Water", 100, "ConTW"], // Change ID to ConTW
         [concreteWanted * 5, "Cement Mix", 25, "ConMix"],
         // Trips placeholders
         [Math.ceil(ceil10(((concreteWanted * 25) / 0.6), 1) / 12), "QRTrips", 150, "QRTrips"],
