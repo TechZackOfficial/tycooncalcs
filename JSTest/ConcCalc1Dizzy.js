@@ -3,6 +3,20 @@
 
         var trailerCapacity = document.getElementById("TrailerSelect").value;
         var concreteWanted = document.getElementById("AmountRequired").value;
+        var MK15 = document.getElementById("MK15").value;
+        var premium = document.getElementById("Premium");
+        var PostOP = document.getElementById("PostOP");
+
+
+        if (premium.checked == true) {
+            trailerCapacity = trailerCapacity * 1.15;
+        } else if (premium.checked || PostOP.checked) {
+            trailerCapacity = trailerCapacity * 1.3;
+       }
+
+        // Debug for Checks
+        console.log(trailerCapacity)
+
 
         const materialCalc = [ // calc for value : item name : weight : HTML Textbox ID
             [concreteWanted * 5, "Cement Mix", 50, "CMRequired"],
