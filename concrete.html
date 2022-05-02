@@ -32,38 +32,8 @@
                     <h3 class="text-dark mb-4" style="padding: 0px;margin: 24px 0px 24px;">Concrete Calculator</h3>
                     <div class="row mb-3">
                         <div class="col-lg-8">
-                            <div class="row mb-3 d-none">
-                                <div class="col">
-                                    <div class="card textwhite bg-primary text-white shadow">
-                                        <div class="card-body">
-                                            <div class="row mb-2">
-                                                <div class="col">
-                                                    <p class="m-0">Peformance</p>
-                                                    <p class="m-0"><strong>65.2%</strong></p>
-                                                </div>
-                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
-                                            </div>
-                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card textwhite bg-success text-white shadow">
-                                        <div class="card-body">
-                                            <div class="row mb-2">
-                                                <div class="col">
-                                                    <p class="m-0">Peformance</p>
-                                                    <p class="m-0"><strong>65.2%</strong></p>
-                                                </div>
-                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
-                                            </div>
-                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="row">
-                                <div class="col" style="height: 2347px;">
+                                <div class="col" style="height: 2616px;">
                                     <div class="card shadow mb-3">
                                         <div class="card-header py-3">
                                             <p class="text-primary m-0 fw-bold">Concrete Information</p>
@@ -77,23 +47,23 @@
                                                     <div class="col">
                                                         <div class="mb-3"><label class="form-label"><strong>Trailer</strong></label><select class="form-select" id="TrailerSelect" onselect="ConcreteCalc()">
                                                                 <optgroup label="Other Vehicles">
-                                                                    <option value="345">Speedo (345kg)</option>
+                                                                    <option value="300">Speedo (300kg)</option>
                                                                 </optgroup>
                                                                 <optgroup label="Trailers">
-                                                                    <option value="460">MK1 (460kg)</option>
-                                                                    <option value="546">MK2 (546kg)</option>
-                                                                    <option value="690">MK3 (690kg)</option>
-                                                                    <option value="891">MK4 (891kg)</option>
-                                                                    <option value="1150">MK5 (1,150kg)</option>
-                                                                    <option value="1725">MK6 (1,725kg)</option>
-                                                                    <option value="2530">MK7 (2,530kg)</option>
-                                                                    <option value="2875">MK8 (2,875kg)</option>
-                                                                    <option value="3162">MK9 (3,162kg)</option>
-                                                                    <option value="3450">MK10 (3,450kg)</option>
-                                                                    <option value="4025">MK11 (4,025kg)</option>
-                                                                    <option value="5750">MK12 (5,750kg)</option>
-                                                                    <option value="9975">MK13 (9,975kg)</option>
-                                                                    <option value="10350">MK14 (10,350kg)</option>
+                                                                    <option value="400">MK1 (400kg)</option>
+                                                                    <option value="475">MK2 (475kg)</option>
+                                                                    <option value="600">MK3 (600kg)</option>
+                                                                    <option value="775">MK4 (775kg)</option>
+                                                                    <option value="1000">MK5 (1,000kg)</option>
+                                                                    <option value="1500">MK6 (1,500kg)</option>
+                                                                    <option value="2200">MK7 (2,200kg)</option>
+                                                                    <option value="2500">MK8 (2,500kg)</option>
+                                                                    <option value="2750">MK9 (2,750kg)</option>
+                                                                    <option value="3000">MK10 (3,000kg)</option>
+                                                                    <option value="3500">MK11 (3,500kg)</option>
+                                                                    <option value="5000">MK12 (5,000kg)</option>
+                                                                    <option value="8500">MK13 (8,500kg)</option>
+                                                                    <option value="9000">MK14 (9,000kg)</option>
                                                                 </optgroup>
                                                             </select></div>
                                                     </div>
@@ -101,9 +71,9 @@
                                                 <div class="row">
                                                     <div class="col">
                                                         <div class="mb-3"><label class="form-label"><strong>Semi-Cabs / Extras</strong><br></label>
-                                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="MK15" value="6900"><label class="form-check-label">MK15</label></div>
-                                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="PostOP"><label class="form-check-label">PostOP Perk</label></div>
-                                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="Premium" checked=""><label class="form-check-label">Premium</label></div>
+                                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="MK15" value="6900" onselect="ConcreteCalc()"><label class="form-check-label">MK15</label></div>
+                                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="PostOP" onselect="ConcreteCalc()"><label class="form-check-label">PostOP Perk</label></div>
+                                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="Premium" checked="" onselect="ConcreteCalc()"><label class="form-check-label">Premium</label></div>
                                                         </div>
                                                         <div class="mb-3"><label class="form-label"><strong>Water Route</strong><br></label>
                                                             <div class="form-check"><input class="form-check-input" type="checkbox" id="LSRouteCheck"><label class="form-check-label">Los Santos Route</label></div>
@@ -124,29 +94,31 @@
                                             </form>
                                         </div>
                                     </div>
-                                    <div class="card shadow">
-                                        <div class="card-header py-3">
-                                            <p class="text-primary m-0 fw-bold">Logs (Logging Camp to Sawmill)</p>
-                                        </div>
-                                        <div class="card-body">
-                                            <form>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div class="mb-3"><label class="form-label"><strong>Logs Required</strong><br></label><input class="form-control" type="number" id="LogsRequired" readonly=""></div>
+                                    <div id="LogsCard" class="padding-top: 16px;">
+                                        <div class="card shadow">
+                                            <div class="card-header py-3">
+                                                <p class="text-primary m-0 fw-bold">Logs (Logging Camp to Sawmill)</p>
+                                            </div>
+                                            <div class="card-body">
+                                                <form>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mb-3"><label class="form-label"><strong>Logs Required</strong><br></label><input class="form-control" type="number" id="LogsRequired" readonly=""></div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="mb-3"><label class="form-label"><strong>Trips Required</strong><br></label><input class="form-control" type="number" id="LogsTrips" readonly=""></div>
+                                                        </div>
                                                     </div>
-                                                    <div class="col">
-                                                        <div class="mb-3"><label class="form-label"><strong>Trips Required</strong><br></label><input class="form-control" type="number" id="LogsTrips" readonly=""></div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mb-3"><label class="form-label"><strong>Sawdust</strong><br></label><input class="form-control" type="number" id="SawdustCalc" readonly=""></div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div class="mb-3"><label class="form-label"><strong>Sawdust</strong><br></label><input class="form-control" type="number" id="SawdustCalc" readonly=""></div>
-                                                    </div>
-                                                </div>
-                                            </form>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div style="padding-top: 16px;">
+                                    <div id="QRCard" style="padding-top: 16px;">
                                         <div class="card shadow">
                                             <div class="card-header py-3">
                                                 <p class="text-primary m-0 fw-bold">Quarry Rubble (Quarry to Filtering Plant)</p>
@@ -176,7 +148,34 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="treatedwatercard" style="padding-top: 16px;">
+                                    <div id="QRCard2" style="padding-top: 16px;">
+                                        <div class="card shadow">
+                                            <div class="card-header py-3">
+                                                <p class="text-primary m-0 fw-bold">Gravel to Sand</p>
+                                            </div>
+                                            <div class="card-body">
+                                                <form>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mb-3"><label class="form-label"><strong>Gravel Required</strong><br></label><input class="form-control" type="number" id="GRRequired" readonly=""></div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="mb-3"><label class="form-label"><strong>Processing Rotations</strong><br></label><input class="form-control" type="number" id="GRotations" readonly=""></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mb-3"><label class="form-label"><strong>Sand</strong><br></label><input class="form-control" type="number" id="GRSand" readonly=""></div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="mb-3"><label class="form-label"><strong>Flint</strong></label><input class="form-control" type="number" id="GRFlint" readonly=""></div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="TWCard" style="padding-top: 16px;">
                                         <div class="card shadow">
                                             <div class="card-header py-3">
                                                 <p class="text-primary m-0 fw-bold">Toxic Waste (Elysian Island Waste Depot to Filtering Plant)</p>
@@ -206,13 +205,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div style="padding-top: 16px;">
+                                    <div id="TreatedWCard" style="padding-top: 16px;">
                                         <div class="card shadow">
                                             <div class="card-header py-3">
                                                 <p class="text-primary m-0 fw-bold">Treating Water</p>
                                             </div>
                                             <div class="card-body">
-                                                <div class="LSRouteCard">
+                                                <div id="LSRouteSection">
                                                     <p class="fs-5 fw-bold">Los Santos</p>
                                                     <form>
                                                         <div class="row">
@@ -233,12 +232,12 @@
                                                         </div>
                                                     </form>
                                                 </div>
-                                                <div class="LCRouteCard">
+                                                <div id="LCRouteSection">
                                                     <p class="fs-5 fw-bold">Liberty City</p>
                                                     <form>
                                                         <div class="row">
                                                             <div class="col">
-                                                                <div class="mb-3"><label class="form-label"><strong>Treated Water Required</strong><br></label><input class="form-control" type="number" id="LCTWRequired" readonly=""></div>
+                                                                <div class="mb-3"><label class="form-label"><strong>Treated Water Required</strong><br></label><input class="form-control" type="number" id="TWRequired" readonly=""></div>
                                                             </div>
                                                             <div class="col">
                                                                 <div class="mb-3"><label class="form-label"><strong>Rotations Required</strong><br></label><input class="form-control" type="number" id="LCTWRotations" readonly=""></div>
@@ -260,7 +259,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="CMCard" style="padding-top: 16px;">
+                                    <div id="CMCard" style="padding-top: 16px;">
                                         <div class="card shadow">
                                             <div class="card-header py-3">
                                                 <p class="text-primary m-0 fw-bold">Cement Mix</p>
@@ -280,7 +279,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="ConCard" style="padding: 16px 0px 0px;padding-top: 16px;">
+                                    <div id="ConCard" style="padding: 16px 0px 0px;padding-top: 16px;">
                                         <div class="card shadow">
                                             <div class="card-header py-3">
                                                 <p class="text-primary m-0 fw-bold">Concrete</p>
@@ -305,7 +304,6 @@
                         </div>
                         <div class="col col-lg-4">
                             <div class="card shadow">
-                                <div></div>
                                 <div class="card-header py-3">
                                     <p class="text-primary m-0 fw-bold">Trailer/Player Information</p>
                                 </div>
