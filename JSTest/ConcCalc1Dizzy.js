@@ -84,37 +84,16 @@ function ConcreteCalc() {
         ]
 
 
-        for (var i = 0; i < materialCalc.length; i++) {
-            var runsRequired = Math.ceil(materialCalc[i][2] * materialCalc[i][0] / trailerCapacity);
-            var calcPageIDs = document.getElementById(materialCalc[i][3]);
-            if(calcPageIDs) {
-                document.getElementById(materialCalc[i][3]).value = materialCalc[i][0];
+     for (var i = 0; i < materialCalc.length; i++) {
+        var calcPageIDs = document.getElementById(materialCalc[i][3]).id;
+        if (calcPageIDs) {
+            if (calcPageIDs.includes("Trips")) {
+                document.getElementById(materialCalc[i][3]).value = Math.ceil(materialCalc[i][2] * materialCalc[i][0] / trailerCapacity); // need weights for calc in array see placeholders
             } else {
-                console.log("ID not found!")
+                document.getElementById(materialCalc[i][3]).value = materialCalc[i][0];
             }
-
-
-
-
-
-
-            //debug block:
-            //console.log("You'll need " + materialCalc[i][0] + " " + materialCalc[i][1] + " Which will take " +
-            //    runsRequired + " trips!</br>");
+        } else {
+            console.log("ID not found!")
         }
-
-       /*for (var i = 0; i < materialCalc.length; i++) {
-           var runsRequired = Math.ceil(materialCalc[i][2] * materialCalc[i][0] / trailerCapacity);
-           var calcPageIDs = document.getElementById(materialCalc[i][3]).id;
-           if(calcPageIDs) {
-               if (calcPageIDs.contains("Trips")) {
-                   document.getElementById(materialCalc[i][3]).value = runsRequired;
-               } else {
-                   document.getElementById(materialCalc[i][3]).value = materialCalc[i][0];
-               }
-           } else {
-               console.log("ID not found!")
-           }
-           console.log(calcPageIDs);
-       }*/
     }
+}
