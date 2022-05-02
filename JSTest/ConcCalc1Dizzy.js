@@ -78,7 +78,7 @@ function ConcreteCalc() {
             [concreteWanted * 10, "Sawdust - Cement Mix", 50, "CMSawdust"],
             // Concrete Calcs
             [concreteWanted, "Concrete", 50, "ConRequired"],
-            [concreteWanted, "Treated Water", 50, "ConSand"], // Change ID to ConTW
+            [concreteWanted, "Treated Water", 50, "ConTW"], // Change ID to ConTW
             [concreteWanted * 5, "Cement Mix", 50, "ConMix"],
         ]
 
