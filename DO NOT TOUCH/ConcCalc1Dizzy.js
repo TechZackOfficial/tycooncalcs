@@ -1,7 +1,7 @@
    function ConcreteCalc1() {
 
 
-        var trailerCapacity = document.getElementById("TrailerSelect").value; // kill me
+        var trailerCapacity = document.getElementById("TrailerSelect").value;
         var concreteWanted = document.getElementById("AmountRequired").value;
 
         const materialCalc = [ // calc for value : item name : weight : HTML Textbox ID
