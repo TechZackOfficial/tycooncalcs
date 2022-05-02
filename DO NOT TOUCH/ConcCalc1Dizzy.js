@@ -32,4 +32,3 @@
                 runsRequired + " trips!</br>");
         }
     }
-</script>
