@@ -4,10 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Profile - Brand</title>
+    <title>Concrete - Tycoon Calcs</title>
+    <meta name="theme-color" content="#4e73df">
+    <meta property="og:description" content="Calculators for the FiveM server Transport Tycoon
+
+Designed by TechZack and DizzyHurricane with help from the TT Community!">
+    <meta property="og:type" content="website">
+    <meta name="description" content="Calculators for the FiveM server Transport Tycoon">
+    <meta property="og:title" content="Tycoon Calculators">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <script src="assets/calculators/ConcreteCalc.js"></script>
 </head>
 
 <body id="page-top">
@@ -19,9 +27,8 @@
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link active" href="profile.html"><i class="fas fa-toolbox"></i><span>Concrete</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="table.html"><i class="fas fa-table"></i><span>Table</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="concrete.html"><i class="fas fa-truck-moving"></i><span>Trucking Calculators</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
@@ -32,38 +39,8 @@
                     <h3 class="text-dark mb-4" style="padding: 0px;margin: 24px 0px 24px;">Concrete Calculator</h3>
                     <div class="row mb-3">
                         <div class="col-lg-8">
-                            <div class="row mb-3 d-none">
-                                <div class="col">
-                                    <div class="card textwhite bg-primary text-white shadow">
-                                        <div class="card-body">
-                                            <div class="row mb-2">
-                                                <div class="col">
-                                                    <p class="m-0">Peformance</p>
-                                                    <p class="m-0"><strong>65.2%</strong></p>
-                                                </div>
-                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
-                                            </div>
-                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card textwhite bg-success text-white shadow">
-                                        <div class="card-body">
-                                            <div class="row mb-2">
-                                                <div class="col">
-                                                    <p class="m-0">Peformance</p>
-                                                    <p class="m-0"><strong>65.2%</strong></p>
-                                                </div>
-                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
-                                            </div>
-                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="row">
-                                <div class="col" style="height: 2325px;">
+                                <div class="col" style="height: 2699px;">
                                     <div class="card shadow mb-3">
                                         <div class="card-header py-3">
                                             <p class="text-primary m-0 fw-bold">Concrete Information</p>
@@ -72,28 +49,28 @@
                                             <form>
                                                 <div class="row">
                                                     <div class="col">
-                                                        <div class="mb-3"><label class="form-label"><strong>Amount Required</strong></label><input class="form-control" type="number" id="AmountRequired" min="1"></div>
+                                                        <div class="mb-3"><label class="form-label"><strong>Amount Required</strong></label><input class="form-control" type="number" id="AmountRequired" min="1" oninput="ConcreteCalc()"></div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="mb-3"><label class="form-label"><strong>Trailer</strong></label><select class="form-select" id="TrailerSelect">
+                                                        <div class="mb-3"><label class="form-label"><strong>Trailer</strong></label><select class="form-select" id="TrailerSelect" onselect="ConcreteCalc()">
                                                                 <optgroup label="Other Vehicles">
-                                                                    <option value="MK1">Speedo (345kg)</option>
+                                                                    <option value="300">Speedo (300kg)</option>
                                                                 </optgroup>
                                                                 <optgroup label="Trailers">
-                                                                    <option value="MK1">MK1 (460kg)</option>
-                                                                    <option value="MK2">MK2 (546kg)</option>
-                                                                    <option value="MK3">MK3 (690kg)</option>
-                                                                    <option value="MK4">MK4 (891kg)</option>
-                                                                    <option value="MK5">MK5 (1,150kg)</option>
-                                                                    <option value="MK6">MK6 (1,725kg)</option>
-                                                                    <option value="MK7">MK7 (2,530kg)</option>
-                                                                    <option value="MK8">MK8 (2,875kg)</option>
-                                                                    <option value="MK9">MK9 (3,162kg)</option>
-                                                                    <option value="MK10">MK10 (3,450kg)</option>
-                                                                    <option value="MK11">MK11 (4,025kg)</option>
-                                                                    <option value="MK12">MK12 (5,750kg)</option>
-                                                                    <option value="MK13">MK13 (9,975kg)</option>
-                                                                    <option value="MK14">MK14 (10,350kg)</option>
+                                                                    <option value="400">MK1 (400kg)</option>
+                                                                    <option value="475">MK2 (475kg)</option>
+                                                                    <option value="600">MK3 (600kg)</option>
+                                                                    <option value="775">MK4 (775kg)</option>
+                                                                    <option value="1000">MK5 (1,000kg)</option>
+                                                                    <option value="1500">MK6 (1,500kg)</option>
+                                                                    <option value="2200">MK7 (2,200kg)</option>
+                                                                    <option value="2500">MK8 (2,500kg)</option>
+                                                                    <option value="2750">MK9 (2,750kg)</option>
+                                                                    <option value="3000">MK10 (3,000kg)</option>
+                                                                    <option value="3500">MK11 (3,500kg)</option>
+                                                                    <option value="5000">MK12 (5,000kg)</option>
+                                                                    <option value="8500">MK13 (8,500kg)</option>
+                                                                    <option value="9000">MK14 (9,000kg)</option>
                                                                 </optgroup>
                                                             </select></div>
                                                     </div>
@@ -101,8 +78,9 @@
                                                 <div class="row">
                                                     <div class="col">
                                                         <div class="mb-3"><label class="form-label"><strong>Semi-Cabs / Extras</strong><br></label>
-                                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="MK15"><label class="form-check-label">MK15</label></div>
-                                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="PostOP"><label class="form-check-label">PostOP Perk</label></div>
+                                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="MK15" value="6900" onselect="ConcreteCalc()"><label class="form-check-label">MK15</label></div>
+                                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="PostOP" onselect="ConcreteCalc()"><label class="form-check-label">PostOP Perk</label></div>
+                                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="Premium" checked="" onselect="ConcreteCalc()"><label class="form-check-label">Premium</label></div>
                                                         </div>
                                                         <div class="mb-3"><label class="form-label"><strong>Water Route</strong><br></label>
                                                             <div class="form-check"><input class="form-check-input" type="checkbox" id="LSRouteCheck"><label class="form-check-label">Los Santos Route</label></div>
@@ -123,29 +101,31 @@
                                             </form>
                                         </div>
                                     </div>
-                                    <div class="card shadow">
-                                        <div class="card-header py-3">
-                                            <p class="text-primary m-0 fw-bold">Logs (Logging Camp to Sawmill)</p>
-                                        </div>
-                                        <div class="card-body">
-                                            <form>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div class="mb-3"><label class="form-label"><strong>Logs Required</strong><br></label><input class="form-control" type="number" id="LogsRequired" readonly=""></div>
+                                    <div id="LogsCard" class="padding-top: 16px;">
+                                        <div class="card shadow">
+                                            <div class="card-header py-3">
+                                                <p class="text-primary m-0 fw-bold">Logs (Logging Camp to Sawmill)</p>
+                                            </div>
+                                            <div class="card-body">
+                                                <form>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mb-3"><label class="form-label"><strong>Logs Required</strong><br></label><input class="form-control" type="number" id="LogsRequired" readonly=""></div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="mb-3"><label class="form-label"><strong>Trips Required</strong><br></label><input class="form-control" type="number" id="LogsTrips" readonly=""></div>
+                                                        </div>
                                                     </div>
-                                                    <div class="col">
-                                                        <div class="mb-3"><label class="form-label"><strong>Trips Required</strong><br></label><input class="form-control" type="number" id="LogsTrips" readonly=""></div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mb-3"><label class="form-label"><strong>Sawdust</strong><br></label><input class="form-control" type="number" id="SawdustCalc" readonly=""></div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div class="mb-3"><label class="form-label"><strong>Sawdust</strong><br></label><input class="form-control" type="number" id="SawdustCalc" readonly=""></div>
-                                                    </div>
-                                                </div>
-                                            </form>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div style="padding-top: 16px;">
+                                    <div id="QRCard" style="padding-top: 16px;">
                                         <div class="card shadow">
                                             <div class="card-header py-3">
                                                 <p class="text-primary m-0 fw-bold">Quarry Rubble (Quarry to Filtering Plant)</p>
@@ -175,7 +155,34 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="treatedwatercard" style="padding-top: 16px;">
+                                    <div id="QRCard2" style="padding-top: 16px;">
+                                        <div class="card shadow">
+                                            <div class="card-header py-3">
+                                                <p class="text-primary m-0 fw-bold">Gravel to Sand</p>
+                                            </div>
+                                            <div class="card-body">
+                                                <form>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mb-3"><label class="form-label"><strong>Gravel Required</strong><br></label><input class="form-control" type="number" id="GRRequired" readonly=""></div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="mb-3"><label class="form-label"><strong>Processing Rotations</strong><br></label><input class="form-control" type="number" id="GRotations" readonly=""></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mb-3"><label class="form-label"><strong>Sand</strong><br></label><input class="form-control" type="number" id="GRSand" readonly=""></div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="mb-3"><label class="form-label"><strong>Flint</strong></label><input class="form-control" type="number" id="GRFlint" readonly=""></div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="TWCard" style="padding-top: 16px;">
                                         <div class="card shadow">
                                             <div class="card-header py-3">
                                                 <p class="text-primary m-0 fw-bold">Toxic Waste (Elysian Island Waste Depot to Filtering Plant)</p>
@@ -205,13 +212,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div style="padding-top: 16px;">
+                                    <div id="TreatedWCard" style="padding-top: 16px;">
                                         <div class="card shadow">
                                             <div class="card-header py-3">
                                                 <p class="text-primary m-0 fw-bold">Treating Water</p>
                                             </div>
                                             <div class="card-body">
-                                                <div class="LSRouteCard">
+                                                <div id="LSRouteSection">
                                                     <p class="fs-5 fw-bold">Los Santos</p>
                                                     <form>
                                                         <div class="row">
@@ -232,7 +239,7 @@
                                                         </div>
                                                     </form>
                                                 </div>
-                                                <div class="LCRouteCard">
+                                                <div id="LCRouteSection">
                                                     <p class="fs-5 fw-bold">Liberty City</p>
                                                     <form>
                                                         <div class="row">
@@ -245,13 +252,18 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="col">
-                                                                <div class="mb-3"><label class="form-label"><strong>Car Parts</strong><br></label><input class="form-control" type="number" id="LCTWCar" readonly=""></div>
+                                                                <div class="mb-3"><label class="form-label"><strong>Auto Parts</strong><br></label><input class="form-control" type="number" id="LCTWCar" readonly=""></div>
                                                             </div>
                                                             <div class="col">
-                                                                <div class="mb-3"><label class="form-label"><strong>Scrap Mercury</strong><br></label><input class="form-control" type="number" id="LCTW2" readonly=""></div>
+                                                                <div class="mb-3"><label class="form-label"><strong>Military Goods</strong><br></label><input class="form-control" type="number" id="LCTWMG" readonly=""></div>
                                                             </div>
                                                             <div class="col">
-                                                                <div class="mb-3"><label class="form-label"><strong>Acid</strong><br></label><input class="form-control" type="number" id="LCTW3" readonly=""></div>
+                                                                <div class="mb-3"><label class="form-label"><strong>Export Goods</strong><br></label><input class="form-control" type="number" id="LCTWEG" readonly=""></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="mb-3"><label class="form-label"><strong>Liberty City Token</strong><br></label><input class="form-control" type="number" id="LCTWToken" readonly=""></div>
                                                             </div>
                                                         </div>
                                                     </form>
@@ -259,7 +271,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="CMCard" style="padding-top: 16px;">
+                                    <div id="CMCard" style="padding-top: 16px;">
                                         <div class="card shadow">
                                             <div class="card-header py-3">
                                                 <p class="text-primary m-0 fw-bold">Cement Mix</p>
@@ -279,7 +291,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="ConCard" style="padding-top: 16px;">
+                                    <div id="ConCard" style="padding: 16px 0px 0px;padding-top: 16px;">
                                         <div class="card shadow">
                                             <div class="card-header py-3">
                                                 <p class="text-primary m-0 fw-bold">Concrete</p>
@@ -289,7 +301,7 @@
                                                     <div class="mb-3"><label class="form-label"><strong>Concrete Required</strong><br></label><input class="form-control" type="number" id="ConRequired" readonly=""></div>
                                                     <div class="row">
                                                         <div class="col">
-                                                            <div class="mb-3"><label class="form-label"><strong>Treated Water</strong></label><input class="form-control" type="number" id="ConSand" readonly=""></div>
+                                                            <div class="mb-3"><label class="form-label"><strong>Treated Water</strong></label><input class="form-control" type="number" id="ConTW" readonly=""></div>
                                                         </div>
                                                         <div class="col">
                                                             <div class="mb-3"><label class="form-label"><strong>Cement Mix</strong><br></label><input class="form-control" type="number" id="ConMix" readonly=""></div>
@@ -304,7 +316,6 @@
                         </div>
                         <div class="col col-lg-4">
                             <div class="card shadow">
-                                <div></div>
                                 <div class="card-header py-3">
                                     <p class="text-primary m-0 fw-bold">Trailer/Player Information</p>
                                 </div>
@@ -313,34 +324,26 @@
                                     <form>
                                         <div class="row">
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="city"><strong>Sand</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Sand</strong><br></label><input class="form-control" type="number" id="TrailerSand" readonly=""></div>
                                             </div>
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="country"><strong>Flint</strong><br></label><input class="form-control" type="number" readonly=""></div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="city"><strong>Sand</strong><br></label><input class="form-control" type="number" readonly=""></div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="country"><strong>Sawdust&nbsp;</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Sawdust&nbsp;</strong><br></label><input class="form-control" type="number" id="TrailerSawdust" readonly=""></div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="city"><strong>Acid</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Acid</strong><br></label><input class="form-control" type="number" id="TrailerAcid" readonly=""></div>
                                             </div>
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label fw-normal" for="country"><strong>Unfil Water</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label fw-normal"><strong>Unfil Water</strong><br></label><input class="form-control" type="number" id="TrailerUnfil" readonly=""></div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="city"><strong>Treated Water</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Cement Mix</strong><br></label><input class="form-control" type="number" id="TrailerCement" readonly=""></div>
                                             </div>
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="country"><strong>Concrete Mix</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Treated Water</strong><br></label><input class="form-control" type="number" id="TrailedTreated" readonly=""></div>
                                             </div>
                                         </div>
                                     </form>
@@ -348,26 +351,26 @@
                                     <form>
                                         <div class="row">
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="city"><strong>Sand</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Sand</strong><br></label><input class="form-control" type="number" id="PlayerSand" readonly=""></div>
                                             </div>
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="country"><strong>Sawdust&nbsp;</strong><br></label><input class="form-control" type="number" readonly=""></div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="city"><strong>Acid</strong></label><input class="form-control" type="number" readonly=""></div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="country"><strong>Unfil Water</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Sawdust&nbsp;</strong><br></label><input class="form-control" type="number" id="PlayerSawdust" readonly=""></div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="city"><strong>Treated Water</strong></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Acid</strong></label><input class="form-control" type="number" id="PlayerAcid" readonly=""></div>
                                             </div>
                                             <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="country"><strong>Concrete Mix</strong><br></label><input class="form-control" type="number" readonly=""></div>
+                                                <div class="mb-3"><label class="form-label"><strong>Unfil Water</strong><br></label><input class="form-control" type="number" id="PlayerUnfil" readonly=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3"><label class="form-label"><strong>Cement Mix</strong><br></label><input class="form-control" type="number" id="PlayerCement" readonly=""></div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="mb-3"><label class="form-label"><strong>Treated Water</strong><br></label><input class="form-control" type="number" id="PlayerTreated" readonly=""></div>
                                             </div>
                                         </div>
                                     </form>
@@ -381,15 +384,15 @@
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-6" style="width: 300px;">
                                     <form>
-                                        <div class="mb-3"><label class="form-label" for="signature"><strong>Money from Selling</strong><br><input class="form-control" type="number" id="SellingMoney" readonly="" style="width: 350px;"></label></div>
-                                        <div class="mb-3"><label class="form-label" for="signature"><strong>Total Profit</strong><br><input class="form-control" type="number" id="Profit" readonly="" style="width: 350px;"></label></div>
+                                        <div class="mb-3"><label class="form-label"><strong>Money from Selling</strong><br><input class="form-control" type="number" id="SellingMoney" readonly="" style="width: 350px;"></label></div>
+                                        <div class="mb-3"><label class="form-label"><strong>Total Profit</strong><br><input class="form-control" type="number" id="Profit" readonly="" style="width: 350px;"></label></div>
                                     </form>
                                 </div>
                                 <div class="col">
                                     <form>
-                                        <div class="mb-3"><label class="form-label" for="signature"><strong>Costs</strong><br><input class="form-control" type="number" id="TotalCosts" readonly="" style="width: 350px;"></label></div>
+                                        <div class="mb-3"><label class="form-label"><strong>Costs</strong><br><input class="form-control" type="number" id="TotalCosts" readonly="" style="width: 350px;"></label></div>
                                     </form>
                                 </div>
                             </div>
@@ -399,13 +402,12 @@
             </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © Brand 2022</span></div>
+                    <div class="text-center my-auto copyright"><span>Made with&nbsp;❤️ by&nbsp; TechZack &amp; Dizzy Hurricane with help from the TT Community!&nbsp;</span></div>
                 </div>
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>
 </body>
 
