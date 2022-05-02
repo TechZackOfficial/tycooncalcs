@@ -78,9 +78,13 @@ function ConcreteCalc() {
             [concreteWanted * 25, "Sand", 5, "CMSand"],
             [concreteWanted * 10, "Sawdust", 3, "CMSawdust"],
             // Concrete Calcs
+
             [concreteWanted, "Concrete", 160, "ConRequired"],
             [concreteWanted, "Treated Water", 100, "ConTW"], // Change ID to ConTW
             [concreteWanted * 5, "Cement Mix", 25, "ConMix"],
+             // Trips placeholders
+            [null, "QRTrips", 50, "QRTrips"],
+            [null, "TWTrips", 50, "TWTrips"],
         ]
 
 
