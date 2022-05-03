@@ -33,6 +33,7 @@ function ConcreteCalc() {
     if (concreteWanted > 1000000) {
       console.log("Number too high creates silly output!");
       // document.getElementByID("SomeLabel").value = "Concrete required too high!"
+      // OR concreteWanted = 1000000; no return
       return;
     }
 
