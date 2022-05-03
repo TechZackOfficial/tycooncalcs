@@ -29,6 +29,12 @@ function ConcreteCalc() {
     var premium = document.getElementById("Premium");
     var PostOP = document.getElementById("PostOP");
     const ceil10 = (value, exp) => decimalAdjust('ceil', value, exp);
+    
+    if (concreteWanted > 1000000) {
+      console.log("Number too high creates silly output!");
+      // document.getElementByID("SomeLabel").value = "Concrete required too high!"
+      return;
+    }
 
 
     if (premium.checked) {
