@@ -90,7 +90,7 @@ function ConcreteCalc() {
         [concreteWanted, "Treated Water", 100, "ConTW", 0], // Change ID to ConTW
         [concreteWanted * 5, "Cement Mix", 25, "ConMix", 0],
         // Trips placeholders
-        [Math.ceil(ceil10(((concreteWanted * 25) / 0.6), 1) / 12), "QRTrips", 150, "QRTrips"],
+        [Math.ceil(ceil10(((concreteWanted * 25) / 0.6), 1) / 12), "QRTrips", 150, "QRTrips", 0],
         [concreteWanted, "TWTrips", 100, "TWTrips", 0],
         [concreteWanted, "TreatedWTripsLosSantos", 100, "TreatedWTrips", 0],
         [concreteWanted, "LogsTrips to Sawmill", 60, "LogsTrips", 0]
